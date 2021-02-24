@@ -6,6 +6,7 @@ int main (){
   FILE *arq;
   FILE *arq1;
   char a;
+  int tamanho = 0;
 
   arq = fopen("texto.txt","r");
   arq1 = fopen("texto_saida.txt","w");
@@ -19,10 +20,14 @@ int main (){
     a = getc(arq);
   if(a == 'A'|| a =='a'|| a =='E'|| a == 'e'|| a == 'I'|| a == 'i'|| a =='O'|| a == 'o'|| a == 'U'|| a == 'u'){
     fprintf(arq1,"*");
+}if(a == '\n'){
+  tamanho++;
 }else{
     fprintf(arq1,"%c",a );
   }
 }while(a != EOF);
+
+printf("Tem %i linhas o arquivo\n",tamanho );
 
   fclose(arq);
   fclose(arq1);
