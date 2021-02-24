@@ -6,9 +6,8 @@ int funcao_recurssiva(int x,int y){
     return 1;
   }else{
     return x * funcao_recurssiva(x,y-1);
-  }
-}
-
+  }//fim else
+}//fim funcao_recurssiva
 int main (){
 
   int x;
